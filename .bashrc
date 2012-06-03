@@ -1,16 +1,6 @@
 
 export EDITOR=nano
 
-# The following entry to /usr/local/etc/sudoers file is required:
-# flo ALL = NOPASSWD:/sbin/sysctl
-speakers() {
-  sudo sysctl hw.snd.default_unit=4
-}
-
-headphones() {
-  sudo sysctl hw.snd.default_unit=5
-}
-
 check-dotfiles() {
   OLD=`pwd`
   cd ~/.dotfiles
