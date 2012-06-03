@@ -1,6 +1,6 @@
-XTerm*font: -*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*
-Xterm*fontBold: -*-terminus-bold-*-*-*-16-*-*-*-*-*-*-*
+XTerm*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*
+Xterm*fontBold: -*-terminus-bold-*-*-*-17-*-*-*-*-*-*-*
 XTerm*background: black
-XTerm*foreground: white
+XTerm*foreground: gray
 XTerm*cursorColor: red
 
