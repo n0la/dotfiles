@@ -4,6 +4,8 @@
 (global-set-key (kbd "C-?") 'help-command)
 
 (setq tab-stop-list (number-sequence 4 200 4))
+(setq line-number-mode t)
+(setq column-number-mode t)
 
 ;; Backup files are annoying and tabs are evil.
 (custom-set-variables
