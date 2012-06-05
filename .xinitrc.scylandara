@@ -1,0 +1,36 @@
+start-left() {
+  xterm -title "left session" -e "~/bin/left-session" &
+  WINDOWID=""
+
+  while [ -z $WINDOWID ]; do
+    WINDOWID=`xdotool search "left session" 2>/dev/null`
+  done
+
+  xdotool windowsize $WINDOWID 1678 1020
+  xdotool windowmove $WINDOWID 0 0
+}
+
+start-right() {
+  xterm -title "right session" -e "~/bin/right-session" &
+
+  WINDOWID=""
+  while [ -z $WINDOWID ]; do
+    WINDOWID=`xdotool search "right session" 2>/dev/null`
+  done
+
+  xdotool windowsize $WINDOWID 1678 1000
+  xdotool windowmove $WINDOWID 1680 0
+}
+
+xrdb -merge ~/.Xresources
+# No pulse audio for FreeBSD :-(
+#pulseaudio --system=no -D
+# Change keyboard layout to UK
+setxkbmap gb
+
+start-left
+start-right
+
+# Run fluxbox
+startfluxbox
+

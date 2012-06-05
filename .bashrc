@@ -12,14 +12,15 @@ check-dotfiles() {
   cd $OLD
 }
 
+# Can be used to split an existing tmux session the way they should be.
 # Default layout for the left window. Runs cmus, mutt and irssi
-left-session() {
+make-left-session() {
   tmux split-window -h -t 0
   tmux split-window -v -t 0
 }
 
 # Default layout for the right window, runs emacs and other stuff
-right-session() {
+make-right-session() {
   tmux split-window -h -t 0
 }
 
