@@ -1,5 +1,5 @@
-start-left() {
-  xterm -title "left session" -e "~/bin/left-session" &
+scylandara-left() {
+  xterm -title "left session" -e "~/.dotfiles/scylandara-left-session" &
   WINDOWID=""
 
   while [ -z $WINDOWID ]; do
@@ -10,8 +10,8 @@ start-left() {
   xdotool windowmove $WINDOWID 0 0
 }
 
-start-right() {
-  xterm -title "right session" -e "~/bin/right-session" &
+scylandara-right() {
+  xterm -title "right session" -e "~/.dotfiles/scylandara-right-session" &
 
   WINDOWID=""
   while [ -z $WINDOWID ]; do
@@ -22,14 +22,24 @@ start-right() {
   xdotool windowmove $WINDOWID 1680 0
 }
 
+scylandara-setup() {
+  # no tmux installed -> nothing to do
+  which tmux || return 0
+  which xdotool || (echo "xdotool required." && return 1)
+
+  scylandara-left
+  scylandara-right
+}
+
 xrdb -merge ~/.Xresources
-# No pulse audio for FreeBSD :-(
-#pulseaudio --system=no -D
+
 # Change keyboard layout to UK
 setxkbmap gb
 
-start-left
-start-right
+# for my main machine
+if [ `hostname` == 'scylandara' ]; then
+  scylandara-setup
+fi
 
 # Run fluxbox
 startfluxbox
