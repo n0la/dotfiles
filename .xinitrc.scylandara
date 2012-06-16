@@ -28,6 +28,7 @@ scylandara-setup() {
   which xdotool || (echo "xdotool required." && return 1)
 
   scylandara-left
+  sleep 1
   scylandara-right
 }
 
