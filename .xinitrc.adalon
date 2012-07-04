@@ -1,0 +1,6 @@
+
+xrdb -merge ~/.Xresources
+setxkbmap gb
+
+startfluxbox
+
