@@ -34,5 +34,5 @@ fi
 EMACS=`which emacs`
 RET=$?
 if [ $RET == 0 ]; then
-  export EDITOR=$EMACS
+  export EDITOR="$EMACS -nw"
 fi
