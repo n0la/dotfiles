@@ -1,0 +1,36 @@
+set imap_user = "fstinglmayr@gmail.com"
+set smtp_url = "smtp://fstinglmayr@smtp.gmail.com:587/"
+set from = "fstinglmayr@gmail.com"
+set realname = "Florian Stinglmayr"
+
+set folder = "imaps://imap.googlemail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[Google Mail]/Drafts"
+
+# Caching for better performance
+set header_cache = "~/.mutt/headers"
+set message_cachedir = "~/.mutt/bodies"
+
+macro index I "c!\n"   "Go to INBOX"
+bind index G imap-fetch-mail
+
+ignore *
+unignore Subject
+unignore From
+unignore Date
+unignore Cc
+unignore To
+unignore User-Agent
+
+# Various other settings that make mutt work 
+# better with GMail
+set imap_keepalive = 900
+set timeout=15
+set mail_check=60
+
+set sort = 'threads'
+set sort_aux = 'last-date-received'
+#set charset="utf-8"
+
+set delete = yes
+set move = no

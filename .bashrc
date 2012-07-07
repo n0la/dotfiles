@@ -30,3 +30,9 @@ if [ `uname` == "FreeBSD" ]; then
   # Source FreeBSD specific bashrc file.
   source ~/.dotfiles/.bashrc_freebsd
 fi
+
+EMACS=`which emacs`
+RET=$?
+if [ $RET == 0 ]; then
+  export EDITOR=$EMACS
+fi
