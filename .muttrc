@@ -5,7 +5,9 @@ set realname = "Florian Stinglmayr"
 
 set folder = "imaps://imap.googlemail.com:993"
 set spoolfile = "+INBOX"
-set postponed = "+[Google Mail]/Drafts"
+set postponed = "+[Gmail]/Drafts"
+#set trash = "+[Gmail]/Trash"
+set record = "+[Gmail]/Sent Mail"
 
 # Caching for better performance
 set header_cache = "~/.mutt/headers"
