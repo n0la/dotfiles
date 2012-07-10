@@ -6,7 +6,7 @@
 (prefer-coding-system       'latin-1)
 (set-default-coding-systems 'latin-1)
 (set-terminal-coding-system 'latin-1)
-(set-keyboard-coding-system 'latin-1)
+;;(set-keyboard-coding-system 'latin-1)
 ;; This from a japanese individual.  I hope it works.
 ;;(setq default-buffer-file-coding-system 'utf-8)
 
