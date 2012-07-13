@@ -1,0 +1,4 @@
+source ~/.dotfiles/.tmux.conf.generic
+# Show battery status in the right corner.
+set -g status-right "#(acpi -b) [%H:%m] [%d.%M.%Y]"
+set -g status-right-length 70

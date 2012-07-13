@@ -1,0 +1,11 @@
+# Change to a more screeny keyboard layout
+set-option -g prefix C-a
+unbind-key C-b
+bind-key C-a send-prefix
+
+# set correct term
+set -g default-terminal screen-256color
+
+set -g base-index 1
+
+set -g status-right "#(acpi -b) [%H:%m] [%d.%M.%Y]"
