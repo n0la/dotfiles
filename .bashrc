@@ -13,6 +13,14 @@ check-dotfiles() {
   cd $OLD
 }
 
+personal-bin() {
+  # Export personal binary directory if
+  # it exists.
+  if [ -d ~/bin ]; then
+    export PATH=$PATH:~/bin
+  fi        
+}
+
 run-btpd() {
     PIDS=`pgrep btpd`
     RET=$?
@@ -25,6 +33,7 @@ run-btpd() {
 
 # Check if we modified some dotfiles we need to stage.
 check-dotfiles
+personal-bin
 
 if [ `uname` == "FreeBSD" ]; then
   # Source FreeBSD specific bashrc file.
