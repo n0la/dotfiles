@@ -7,5 +7,3 @@ bind-key C-a send-prefix
 set -g default-terminal screen-256color
 
 set -g base-index 1
-
-set -g status-right "#(acpi -b) [%H:%m] [%d.%M.%Y]"
