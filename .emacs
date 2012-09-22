@@ -3,8 +3,8 @@
 (global-set-key [(control h)] 'delete-backward-char)
 (global-set-key (kbd "C-?") 'help-command)
 
-(tool-bar-mode)
-(scroll-bar-mode)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 (prefer-coding-system       'latin-1)
 (set-default-coding-systems 'latin-1)
