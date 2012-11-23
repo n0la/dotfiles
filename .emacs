@@ -6,12 +6,12 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-(prefer-coding-system       'latin-1)
-(set-default-coding-systems 'latin-1)
-(set-terminal-coding-system 'latin-1)
-;;(set-keyboard-coding-system 'latin-1)
+(prefer-coding-system       'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
 ;; This from a japanese individual.  I hope it works.
-;;(setq default-buffer-file-coding-system 'utf-8)
+(setq default-buffer-file-coding-system 'utf-8)
 
 (setq tab-stop-list (number-sequence 4 200 4))
 (setq line-number-mode t)
