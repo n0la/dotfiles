@@ -3,6 +3,8 @@ Xterm*fontBold: -*-terminus-bold-*-*-*-16-*-*-*-*-*-*-*
 XTerm*background: black
 XTerm*foreground: white
 XTerm*cursorColor: red
+XTerm*metaSendsEscape: true
+XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
 XTerm*utf8: 1
 XTerm*Utf8: 1
 xterm*utf8: 1
