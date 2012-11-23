@@ -45,3 +45,5 @@ RET=$?
 if [ $RET == 0 ]; then
   export EDITOR="$EMACS -nw"
 fi
+
+alias xterm='xterm -u8'
