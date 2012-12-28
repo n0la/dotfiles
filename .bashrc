@@ -43,7 +43,7 @@ fi
 EMACS=`which emacs`
 RET=$?
 if [ $RET == 0 ]; then
-  export EDITOR="$EMACS -nw"
+  export EDITOR="$EMACS "
 fi
 
 alias xterm='xterm -u8'
