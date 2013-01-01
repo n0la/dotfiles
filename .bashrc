@@ -1,6 +1,7 @@
 
 export EDITOR=nano
 export PAGER=less
+export LANG="en_GB.UTF-8"
 
 check-dotfiles() {
   OLD=`pwd`
