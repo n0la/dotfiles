@@ -1,15 +1,3 @@
-scylandara-left() {
-  xterm -title "left session" -e "~/.dotfiles/scylandara-left-session" &
-  WINDOWID=""
-
-  while [ -z $WINDOWID ]; do
-    WINDOWID=`xdotool search "left session" 2>/dev/null`
-  done
-
-  xdotool windowsize $WINDOWID 1678 1020
-  xdotool windowmove $WINDOWID 0 0
-}
-
 scylandara-right() {
   xterm -title "right session" -e "~/.dotfiles/scylandara-right-session" &
 
@@ -27,20 +15,19 @@ scylandara-setup() {
   which tmux || return 0
   which xdotool || (echo "xdotool required." && return 1)
 
-  scylandara-left
-  sleep 1
   scylandara-right
 }
 
 xrdb -merge ~/.Xresources
+which xscreensaver && xscreensaver -no-splash
 
 # Change keyboard layout to UK
 setxkbmap gb
 
 # for my main machine
-if [ `hostname` == 'scylandara' ]; then
-  scylandara-setup
-fi
+#if [ `hostname` == 'scylandara' ]; then
+#  scylandara-setup
+#fi
 
 # Run fluxbox
 startfluxbox
