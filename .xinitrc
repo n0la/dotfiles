@@ -1,7 +1,7 @@
 
 xrdb -merge ~/.Xresources
 setxkbmap gb
-xscreensaver -no-splash
+xscreensaver -no-splash &
 
 ssh-agent startfluxbox
 
