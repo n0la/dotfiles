@@ -1,8 +1,0 @@
-#!/bin/sh
-
-tmux new-session -d "emacs -nw"
-
-# Default layout for the right window. Runs emacs and a compile session
-tmux split-window -h -t 0
-
-tmux attach-session -d

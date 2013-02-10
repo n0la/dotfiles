@@ -3,4 +3,5 @@ Xterm*fontBold: -*-terminus-bold-*-*-*-16-*-*-*-*-*-*-*
 XTerm*background: black
 XTerm*foreground: gray
 XTerm*cursorColor: red
-
+*locale: 0
+xterm*utf8: 1

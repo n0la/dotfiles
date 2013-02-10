@@ -13,7 +13,7 @@ servers = (
     chatnet = "QuakeNet";
     port = "6667";
   },
-  { address = "irc.oftc.net"; chatnet = "OFTC"; port = "6667"; },
+  { address = "irc.oftc.net"; chatnet = "OFTC"; port = "6697"; },
   {
     address = "irc.gamesurge.net";
     chatnet = "GameSurge";
@@ -38,9 +38,7 @@ chatnets = {
     max_whois = "4";
     max_query_chans = "5";
   };
-  FreeNode = {
-    type = "IRC";
-  };
+  FreeNode = { type = "IRC"; };
   EFNet = { 
     type = "IRC";
     max_kicks = "4";
@@ -100,7 +98,7 @@ chatnets = {
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "silc"; chatnet = "silc"; autojoin = "No"; },
+  { name = "silc"; chatnet = "silc"; autojoin = "No"; }
 );
 
 aliases = {
@@ -265,10 +263,6 @@ statusbar = {
   };
 };
 settings = {
-  core = {
-    real_name = "Nola";
-    user_name = "Nola";
-    nick = "Nola";
-  };
+  core = { real_name = "Nola"; user_name = "Nola"; nick = "Nola"; };
   "fe-text" = { actlist_sort = "refnum"; };
 };
