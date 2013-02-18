@@ -3,8 +3,8 @@
 (global-set-key [(control h)] 'delete-backward-char)
 (global-set-key (kbd "C-?") 'help-command)
 
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
+;;(tool-bar-mode -1)
+;;(scroll-bar-mode -1)
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -13,7 +13,7 @@
 ;; This from a japanese individual.  I hope it works.
 (setq default-buffer-file-coding-system 'utf-8)
 
-(setq tab-stop-list (number-sequence 4 200 4))
+;;(setq tab-stop-list (number-sequence 4 200 4))
 (setq line-number-mode t)
 (setq column-number-mode t)
 
@@ -26,7 +26,7 @@
  '(indent-tabs-mode nil)
  '(make-backup-files nil)
  '(standard-indent 4)
- '(tab-width 2))
+ '(tab-width 4))
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.

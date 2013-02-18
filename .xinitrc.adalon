@@ -2,5 +2,6 @@ xrdb -merge ~/.Xresources
 setxkbmap gb
 xscreensaver -no-splash &
 
-startfluxbox
+#startfluxbox
+exec ratpoison
 
