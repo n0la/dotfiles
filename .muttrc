@@ -32,7 +32,7 @@ set mail_check=60
 
 set sort = 'threads'
 set sort_aux = 'last-date-received'
-#set charset="utf-8"
+set charset="utf-8"
 
 set delete = yes
 set move = no
