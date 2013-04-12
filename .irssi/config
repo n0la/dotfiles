@@ -13,7 +13,7 @@ servers = (
     chatnet = "QuakeNet";
     port = "6667";
   },
-  { address = "irc.oftc.net"; chatnet = "OFTC"; port = "6697"; },
+  { address = "irc.oftc.net"; chatnet = "OFTC"; port = "6667"; },
   {
     address = "irc.gamesurge.net";
     chatnet = "GameSurge";
