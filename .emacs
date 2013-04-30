@@ -28,7 +28,8 @@
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
  '(standard-indent 4)
- '(tab-width 4))
+ '(tab-width 4)
+ '(c-basic-offset 4))
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
