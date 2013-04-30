@@ -36,6 +36,10 @@ run-btpd() {
 check-dotfiles
 personal-bin
 
+if [ -e /etc/profile.d/bash-completion.sh ]; then
+  source /etc/profile.d/bash-completion.sh
+fi
+
 if [ `uname` == "FreeBSD" ]; then
   # Source FreeBSD specific bashrc file.
   source ~/.dotfiles/.bashrc_freebsd

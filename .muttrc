@@ -12,6 +12,8 @@ set record = "+[Gmail]/Sent Mail"
 # Caching for better performance
 set header_cache = "~/.mutt/headers"
 set message_cachedir = "~/.mutt/bodies"
+set charset = "utf-8"
+set send_charset = "utf-8"
 
 macro index I "c!\n"   "Go to INBOX"
 bind index G imap-fetch-mail
@@ -32,7 +34,6 @@ set mail_check=60
 
 set sort = 'threads'
 set sort_aux = 'last-date-received'
-set charset="utf-8"
 
 set delete = yes
 set move = no
