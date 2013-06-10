@@ -1,7 +1,8 @@
 
 export EDITOR=nano
 export PAGER=less
-export LANG="en_GB.UTF-8"
+#export LANG="en_GB.UTF-8"
+export LANG="en_GB"
 
 check-dotfiles() {
   OLD=`pwd`
@@ -43,6 +44,8 @@ fi
 if [ `uname` == "FreeBSD" ]; then
   # Source FreeBSD specific bashrc file.
   source ~/.dotfiles/.bashrc_freebsd
+elif [ `uname` == "OpenBSD" ]; then
+  export PS1="\u@\h:\w$ "
 fi
 
 EMACS=`which emacs`
