@@ -5,6 +5,8 @@ XTerm*foreground: white
 XTerm*cursorColor: red
 XTerm*metaSendsEscape: true
 XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+*locale: 0
+XTerm:allowSendEvents: true
 XTerm*utf8: 1
 XTerm*Utf8: 1
 xterm*utf8: 1
