@@ -1,13 +1,13 @@
-XTerm*faceName: Terminus
-XTerm*faceSize: 10
-XTerm*background: black
-XTerm*foreground: white
-XTerm*cursorColor: red
-XTerm*metaSendsEscape: true
-XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
-XTerm*scrollBar: false
+urxvt*faceName: Terminus
+urxvt*faceSize: 10
+urxvt*background: black
+urxvt*foreground: white
+urxvt*cursorColor: red
+urxvt*metaSendsEscape: true
+urxvt*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+urxvt*scrollBar: false
 *locale: 0
-XTerm:allowSendEvents: true
-XTerm*utf8: 1
-XTerm*Utf8: 1
-xterm*utf8: 1
+urxvt:allowSendEvents: true
+urxvt*utf8: 1
+urxvt*Utf8: 1
+urxvt*utf8: 1

@@ -1,8 +1,11 @@
 
 export EDITOR=nano
 export PAGER=less
-#export LANG="en_GB.UTF-8"
-#export LANG="en_GB"
+
+export LANG="en_US.UTF-8"
+export LC_CTYPE=$LANG
+export LC=$LANG
+export LOCALE=$LANG
 
 check-dotfiles() {
   OLD=`pwd`
