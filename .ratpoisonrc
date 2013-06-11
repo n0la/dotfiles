@@ -4,5 +4,3 @@ bind f exec firefox
 # So the machine locks
 bind l exec /home/flo/bin/lock
 
-exec xterm -e "tmux"
-
