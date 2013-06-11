@@ -2,7 +2,7 @@
 export EDITOR=nano
 export PAGER=less
 #export LANG="en_GB.UTF-8"
-export LANG="en_GB"
+#export LANG="en_GB"
 
 check-dotfiles() {
   OLD=`pwd`
