@@ -15,6 +15,8 @@ set message_cachedir = "~/.mutt/bodies"
 set charset = "utf-8"
 set send_charset = "utf-8
 
+source ~/.dotfiles/.muttrc.crypto
+
 macro index I "c!\n"   "Go to INBOX"
 bind index G imap-fetch-mail
 

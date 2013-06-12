@@ -1,3 +1,6 @@
+xset +fp /usr/local/lib/X11/fonts/terminus
+xset fp rehash
+
 xrdb -merge ~/.Xresources
 setxkbmap gb
 xscreensaver -no-splash &

@@ -1,5 +1,3 @@
-urxvt*faceName: Terminus
-urxvt*faceSize: 10
 urxvt*background: black
 urxvt*foreground: white
 urxvt*cursorColor: red
@@ -11,3 +9,5 @@ urxvt:allowSendEvents: true
 urxvt*utf8: 1
 urxvt*Utf8: 1
 urxvt*utf8: 1
+urxvt*font: -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
+urxvt*fontBold: -*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
