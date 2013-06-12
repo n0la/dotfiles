@@ -15,6 +15,10 @@ set message_cachedir = "~/.mutt/bodies"
 set charset = "utf-8"
 set send_charset = "utf-8
 
+set query_command = "abook --mutt-query '%s'"
+macro generic,index,pager \ca "<shell-escape>abook<return>" "Launch abook."
+macro index,pager A "<pipe-message>abook --add-email<return>" "Add the sender to abook."
+
 source ~/.dotfiles/.muttrc.crypto
 
 macro index I "c!\n"   "Go to INBOX"
