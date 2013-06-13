@@ -44,6 +44,10 @@ if [ -e /etc/profile.d/bash-completion.sh ]; then
   source /etc/profile.d/bash-completion.sh
 fi
 
+if [ -e /usr/local/share/bash-completion/bash_completion ]; then
+  source /usr/local/share/bash-completion/bash_completion
+fi
+
 if [ `uname` == "FreeBSD" ]; then
   # Source FreeBSD specific bashrc file.
   source ~/.dotfiles/.bashrc_freebsd
