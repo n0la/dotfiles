@@ -263,6 +263,6 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = "Nola"; user_name = "Nola"; nick = "Nola"; };
+  core = { real_name = "nola"; user_name = "nola"; nick = "nola"; };
   "fe-text" = { actlist_sort = "refnum"; };
 };
