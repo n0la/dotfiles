@@ -7,6 +7,15 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
+(defun mutt-mail-mode-hook()
+  (flush-lines "^\\(> \n\\)*> -- \n\\(\n?> .*\\)*") ; kill quoted sigs
+  (not-modified)
+  (mail-text)
+  (setq whitespace-line-column 72))
+(or (assoc "mutt-" auto-mode-alist)
+    (setq auto-mode-alist (cons '("/tmp/mutt*" . mail-mode) auto-mode-alist)))
+(add-hook 'mail-mode-hook 'mutt-mail-mode-hook)
+
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs lines-tail trailing))
 (global-whitespace-mode t)
