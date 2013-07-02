@@ -15,7 +15,7 @@ check-dotfiles() {
   if [ $RET != 0 ]; then
     echo "You have unstaged changes in your dotfiles."
   fi
-  cd $OLD
+  cd "$OLD"
 }
 
 personal-bin() {
