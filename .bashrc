@@ -7,6 +7,9 @@ export LC_CTYPE=$LANG
 export LC=$LANG
 export LOCALE=$LANG
 
+export MAILDIR="~/.mail/"
+export MAIL="~/.mail/"
+
 check-dotfiles() {
   OLD=`pwd`
   cd ~/.dotfiles

@@ -1,13 +1,6 @@
-set imap_user = "fstinglmayr@gmail.com"
 set smtp_url = "smtp://fstinglmayr@smtp.gmail.com:587/"
 set from = "fstinglmayr@gmail.com"
 set realname = "Florian Stinglmayr"
-
-set folder = "imaps://imap.googlemail.com:993"
-set spoolfile = "+INBOX"
-set postponed = "+[Gmail]/Drafts"
-#set trash = "+[Gmail]/Trash"
-set record = "+[Gmail]/Sent Mail"
 
 # Caching for better performance
 set header_cache = "~/.mutt/headers"
