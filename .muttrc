@@ -15,7 +15,7 @@ macro index,pager A "<pipe-message>abook --add-email<return>" "Add the sender to
 source ~/.dotfiles/.muttrc.crypto
 
 macro index I "c!\n"   "Go to INBOX"
-bind index G imap-fetch-mail
+macro index G "<shell-escape>fetchmail<return>" "Launch fetchmail."
 
 ignore *
 unignore Subject
