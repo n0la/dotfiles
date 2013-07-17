@@ -6,5 +6,13 @@ PMDIR=$CORRECTHOME/tmp
 LOGFILE=$CORRECTHOME/log
 VERBOSE=on
 
+:0
+* ^TO.*ports@openbsd.org
+openbsd/ports/
 
+:0
+* ^Cc:.*ports@openbsd.org
+openbsd/ports/
 
+:0
+$MAILDIR
