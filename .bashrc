@@ -1,5 +1,5 @@
 
-export EDITOR=nano
+export EDITOR=mg
 export PAGER=less
 
 export LANG="en_US.UTF-8"
@@ -27,16 +27,6 @@ personal-bin() {
   if [ -d ~/bin ]; then
     export PATH=$PATH:~/bin
   fi        
-}
-
-run-btpd() {
-    PIDS=`pgrep btpd`
-    RET=$?
-    if [ $RET == 1 ]; then
-      btpd --bw-out 40 -p 46000 --logfile ~/.btpd/btpd.log
-    else
-      echo "btpd is already running, pids: " $PIDS
-    fi
 }
 
 # Check if we modified some dotfiles we need to stage.
