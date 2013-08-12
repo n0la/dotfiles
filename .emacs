@@ -5,7 +5,7 @@
 
 (menu-bar-mode -1)
 ;;(tool-bar-mode -1)
-(scroll-bar-mode -1)
+;;(scroll-bar-mode -1)
 
 (defun mutt-mail-mode-hook()
   (flush-lines "^\\(> \n\\)*> -- \n\\(\n?> .*\\)*") ; kill quoted sigs
