@@ -11,6 +11,14 @@ VERBOSE=on
 openbsd/ports/
 
 :0
+* ^TO.*arm@openbsd.org
+openbsd/arm/
+
+:0
+* ^Cc:.*arm@openbsd.org
+openbsd/arm/
+
+:0
 * ^Cc:.*ports@openbsd.org
 openbsd/ports/
 
