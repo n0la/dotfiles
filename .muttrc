@@ -45,6 +45,8 @@ set send_charset = "utf8"
 set delete = yes
 set move = no
 
+auto_view text/html;
+
 ## Theme kindly inspired from
 ## http://nongeekshandbook.blogspot.ie/2009/03/mutt-color-configuration.html
 ## Colours for items in the index
