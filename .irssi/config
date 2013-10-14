@@ -27,10 +27,19 @@ servers = (
     address = "irc.freenode.net";
     chatnet = "FreeNode";
     port = "6667";
+  },
+  {
+    address = "n0la.org";
+    port = "5222";
+    #use_ssl = "yes";
+    chatnet = "n0la";
+    #password = "<password>";
+    autoconnect = "yes";
   }
 );
 
 chatnets = {
+  n0la = { type = "XMPP"; nick = "florian@n0la.org"; };
   IRCnet = {
     type = "IRC";
     max_kicks = "4";
@@ -94,6 +103,7 @@ chatnets = {
     max_whois = "30";
   };
   SILC = { type = "SILC"; };
+  "n0la.org" = { type = "IRC"; };
 };
 
 channels = (
