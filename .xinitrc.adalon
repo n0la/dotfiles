@@ -5,6 +5,7 @@ xset -b
 xrdb -merge ~/.Xresources
 setxkbmap gb
 xscreensaver -no-splash &
+dbus-daemon --session --fork
 source ~/.bashrc
 
 export LANG="en_US.UTF-8"
