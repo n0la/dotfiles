@@ -28,6 +28,7 @@ servers = (
     chatnet = "FreeNode";
     port = "6667";
   },
+  { address = "irc.hackint.org"; chatnet = "hackint"; port = "6667"; },
   {
     address = "n0la.org";
     port = "5222";
@@ -104,6 +105,7 @@ chatnets = {
   };
   SILC = { type = "SILC"; };
   "n0la.org" = { type = "IRC"; };
+  hackint = { type = "IRC"; };
 };
 
 channels = (
