@@ -23,12 +23,13 @@ servers = (
   { address = "irc.rizon.net"; chatnet = "Rizon"; port = "6667"; },
   { address = "irc.link-net.org"; chatnet = "LinkNet"; port = "6667"; },
   { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; },
-  { 
-    address = "irc.freenode.net";
-    chatnet = "FreeNode";
-    port = "6667";
+  {
+    address = "irc.hackint.org";
+    chatnet = "HackInt";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
   },
-  { address = "irc.hackint.org"; chatnet = "hackint"; port = "6667"; },
   {
     address = "n0la.org";
     port = "5222";
@@ -36,6 +37,14 @@ servers = (
     chatnet = "n0la";
     #password = "<password>";
     autoconnect = "yes";
+  },
+  {
+    address = "irc.freenode.net";
+    chatnet = "FreeNode";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    autoconnect = "no";
   }
 );
 
