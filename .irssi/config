@@ -36,7 +36,7 @@ servers = (
     #use_ssl = "yes";
     chatnet = "n0la";
     #password = "<password>";
-    autoconnect = "yes";
+    autoconnect = "no";
   },
   {
     address = "irc.freenode.net";
