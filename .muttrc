@@ -1,12 +1,12 @@
-set smtp_url = "smtp://fstinglmayr@smtp.gmail.com:587/"
-set from = "fstinglmayr@gmail.com"
+set smtp_url = "smtp://florian@n0la.org"
+set spoolfile = "imaps://florian@n0la.org/
+set folder = "imaps://florian@n0la.org/"
+
+set from = "florian@n0la.org"
 set realname = "Florian Stinglmayr"
 
-set mbox_type = Maildir
-set folder = "~/.mail/"
-set mbox = "~/.mail/"
-set record = "+sent"
-set postponed = "+postponed"
+set record = "=sent"
+set postponed = "=postponed"
 
 # Caching for better performance
 set header_cache = "~/.mutt/headers"
