@@ -1,3 +1,5 @@
 /gdbprinters/*.pyc
 /.irssi/modules/
 /.irssi/otr/
+/.mutt/headers
+/.mutt/bodies
