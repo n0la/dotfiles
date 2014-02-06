@@ -47,5 +47,5 @@ set move = no
 
 auto_view text/html;
 
-source ~/.mutt/mutt-colors-solarized-dark-16.muttrc
+source ~/.dotfiles/.mutt/mutt-colors-arch.muttrc
 
