@@ -7,6 +7,12 @@
 ;;(tool-bar-mode -1)
 ;;(scroll-bar-mode -1)
 
+(add-to-list 'load-path "~/.dotfiles/.emacs.d/")
+
+(require 'doc-mode)
+;; ASCII doc editing.
+(add-to-list 'auto-mode-alist '("\\\.\\(doc\\|asciidoc\\)$" . doc-mode))
+
 (require 'whitespace)
 
 (defun mutt-mail-mode-hook()
