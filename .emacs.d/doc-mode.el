@@ -44,10 +44,10 @@
 (defface doc-title-1-face
   `((((class color)
       (background dark))
-     (:foreground "brown3" :bold t :height 1.2 :inherit variable-pitch))
+     (:foreground "brown3" t :height 1.2 :inherit variable-pitch))
     (((class color)
       (background light))
-     (:foreground "brown3" :bold t :height 1.2 :inherit variable-pitch))
+     (:foreground "brown3" t :height 1.2 :inherit variable-pitch))
     (t (:weight bold :inherit variable-pitch)))
   "Face for AsciiDoc titles at level 1."
   :group 'doc-faces)
@@ -55,10 +55,10 @@
 (defface doc-title-2-face
   `((((class color)
       (background dark))
-     (:foreground "DeepPink2" :bold t :height 1.1 :inherit variable-pitch))
+     (:foreground "DeepPink2" t :height 1.1 :inherit variable-pitch))
     (((class color)
       (background light))
-     (:foreground "DeepPink2" :bold t :height 1.1 :inherit variable-pitch))
+     (:foreground "DeepPink2" t :height 1.1 :inherit variable-pitch))
     (t (:weight bold :inherit variable-pitch)))
   "Face for AsciiDoc titles at level 2."
   :group 'doc-faces)
@@ -66,10 +66,10 @@
 (defface doc-title-3-face
   `((((class color)
       (background dark))
-     (:foreground "sienna3" :bold t))
+     (:foreground "sienna3" t))
     (((class color)
       (background light))
-     (:foreground "sienna3" :bold t))
+     (:foreground "sienna3" t))
     (t (:weight bold)))
   "Face for AsciiDoc titles at level 3."
   :group 'doc-faces)
@@ -86,8 +86,8 @@
   :group 'doc-faces)
 
 (defface info-node
-  '((((class color) (background light)) (:foreground "brown" :bold t :italic t))
-    (((class color) (background dark)) (:foreground "white" :bold t :italic t))
+  '((((class color) (background light)) (:foreground "brown" t :italic t))
+    (((class color) (background dark)) (:foreground "white" t :italic t))
     (t (:bold t :italic t)))
   "Face for Info node names."
   :group 'doc-faces)
