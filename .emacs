@@ -13,6 +13,10 @@
 ;; ASCII doc editing.
 (add-to-list 'auto-mode-alist '("\\\.\\(doc\\|asciidoc\\)$" . doc-mode))
 
+(require 'yaml-mode)
+;; YAML editing.
+(add-to-list 'auto-mode-alist '("\\.\\(yml\\|yaml\\)$" . yaml-mode))
+
 (require 'whitespace)
 
 (defun mutt-mail-mode-hook()
