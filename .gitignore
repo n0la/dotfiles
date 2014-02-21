@@ -1,5 +1,6 @@
 /gdbprinters/*.pyc
 /.irssi/modules/
 /.irssi/otr/
+/.irssi/away.log
 /.mutt/headers
 /.mutt/bodies
