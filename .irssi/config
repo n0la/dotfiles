@@ -45,6 +45,13 @@ servers = (
     use_ssl = "yes";
     ssl_verify = "yes";
     autoconnect = "no";
+  },
+  {
+    address = "irc.snoonet.org";
+    chatnet = "snoonet";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
   }
 );
 
@@ -115,6 +122,7 @@ chatnets = {
   SILC = { type = "SILC"; };
   "n0la.org" = { type = "IRC"; };
   hackint = { type = "IRC"; };
+  snoonet = { type = "IRC"; };
 };
 
 channels = (
