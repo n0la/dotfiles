@@ -17,6 +17,8 @@
 ;; YAML editing.
 (add-to-list 'auto-mode-alist '("\\.\\(yml\\|yaml\\)$" . yaml-mode))
 
+(require 'graphviz-dot-mode)
+
 (require 'whitespace)
 
 (defun mutt-mail-mode-hook()
