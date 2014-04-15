@@ -21,11 +21,39 @@
 
 (require 'whitespace)
 
+;; Default fill column of 78.
+(set-fill-column 78)
+
+(load-file "~/.dotfiles/.emacs.d/abbrevs.el")
+;; turn on abbrev mode globally
+(setq-default abbrev-mode t)
+
+;;; (define-abbrev-table 'german-minor-mode-abbrev-table '(
+;;;     ("8at" "Austria" nil 0)
+;;;     ))
+
+(define-minor-mode german-minor-mode
+  "Switch German minor mode on."
+  nil nil nil
+  (set (make-local-variable 'german-minor-mode) t)
+  (unless (memq 'german-minor-mode-abbrev-table abbrev-table-name-list)
+    (setq german-minor-mode-abbrev-table
+          (copy-abbrev-table text-mode-abbrev-table))
+    (add-to-list 'abbrev-table-name-list 'german-minor-mode-abbrev-table))
+  (setq local-abbrev-table german-minor-mode-abbrev-table))
+
+(defun disable-german-minor-mode ()
+  " "
+  (interactive)
+  (setq german-minor-mode nil)
+  (setq local-abbrev-table text-mode-abbrev-table))
+
 (defun mutt-mail-mode-hook()
   (flush-lines "^\\(> \n\\)*> -- \n\\(\n?> .*\\)*") ; kill quoted sigs
   (not-modified)
   (mail-text)
   (whitespace-cleanup)
+  (set-fill-column 72)
   (setq whitespace-line-column 72))
 (or (assoc "mutt-" auto-mode-alist)
     (setq auto-mode-alist (cons '("/tmp/mutt*" . mail-mode) auto-mode-alist)))
