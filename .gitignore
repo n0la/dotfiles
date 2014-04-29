@@ -5,3 +5,4 @@
 /.mutt/headers
 /.mutt/bodies
 .emacs.d/auto-save-list
+.irssi/sasl.auth
