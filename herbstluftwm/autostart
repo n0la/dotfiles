@@ -59,7 +59,8 @@ hc keybind $Mod-Control-p       resize up +$resizestep
 hc keybind $Mod-Control-f       resize right +$resizestep
 
 # tags
-tag_names=( {1..9} )
+tag_names=( "main" "web" "feh" "mupdf"
+    "misc5" "misc6" "misc7" "misc8" "misc9"xs )
 tag_keys=( {1..9} 0 )
 
 hc rename default "${tag_names[0]}" || true
@@ -123,9 +124,9 @@ hc unrule -F
 hc rule focus=off # normally do not focus new clients
 # give focus to most common terminals
 hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
-hc rule title~'(.*Firefox.*)' tag=2
-hc rule title~'(.*[fF]eh.*)' tag=3
-hc rule title~'(.*mupdf.*)' tag=4
+hc rule title~'(.*Firefox.*)' tag=web
+hc rule title~'(.*[fF]eh.*)' tag=feh
+hc rule title~'(.*mupdf.*)' tag=mupdf
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
