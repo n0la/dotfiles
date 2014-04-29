@@ -13,4 +13,4 @@ export QT_X11_NO_MITSHM=1
 export LC_CTYPE=$LANG
 export LC=$LANG
 
-exec herbstluftwm
+ssh-agent herbstluftwm
