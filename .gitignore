@@ -4,3 +4,4 @@
 /.irssi/away.log
 /.mutt/headers
 /.mutt/bodies
+.emacs.d/auto-save-list

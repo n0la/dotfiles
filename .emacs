@@ -21,11 +21,15 @@
 
 (require 'whitespace)
 
+;; Default fill column of 78.
+(set-fill-column 78)
+
 (defun mutt-mail-mode-hook()
   (flush-lines "^\\(> \n\\)*> -- \n\\(\n?> .*\\)*") ; kill quoted sigs
   (not-modified)
   (mail-text)
   (whitespace-cleanup)
+  (set-fill-column 72)
   (setq whitespace-line-column 72))
 (or (assoc "mutt-" auto-mode-alist)
     (setq auto-mode-alist (cons '("/tmp/mutt*" . mail-mode) auto-mode-alist)))
