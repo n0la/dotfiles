@@ -1,1 +1,3 @@
 load xmpp
+load otr
+statusbar window add otr
