@@ -62,7 +62,7 @@
  '(ispell-highlight-face (quote flyspell-incorrect))
  '(make-backup-files nil)
  '(standard-indent 4)
- '(tab-width 4))
+ '(tab-width 8))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
