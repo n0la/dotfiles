@@ -13,4 +13,8 @@ export QT_X11_NO_MITSHM=1
 export LC_CTYPE=$LANG
 export LC=$LANG
 
+if [ -z "${DBUS_SESSION_BUS_ADDRESS}" ]; then
+  eval `dbus-launch --auto-syntax --exit-with-session`
+fi
+
 ssh-agent herbstluftwm
