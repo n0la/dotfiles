@@ -4,7 +4,7 @@
 (global-set-key (kbd "C-?") 'help-command)
 
 (menu-bar-mode -1)
-;;(tool-bar-mode -1)
+(tool-bar-mode -1)
 ;;(scroll-bar-mode -1)
 
 (add-to-list 'load-path "~/.dotfiles/.emacs.d/")
@@ -17,9 +17,11 @@
 ;; YAML editing.
 (add-to-list 'auto-mode-alist '("\\.\\(yml\\|yaml\\)$" . yaml-mode))
 
-(require 'graphviz-dot-mode)
-
 (require 'whitespace)
+
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 ;; Default fill column of 78.
 (set-fill-column 78)
@@ -56,6 +58,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(c-basic-offset 4)
+ '(custom-safe-themes (quote ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(ispell-dictionary "en_GB-ise")
@@ -64,9 +67,12 @@
  '(standard-indent 4)
  '(tab-width 8))
 
-(custom-set-faces
+(load-theme 'sanityinc-solarized-dark)
+(set-default-font 'terminus)
+
+;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "*" :family "terminus")))))
+;; '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "*" :family "terminus")))))
