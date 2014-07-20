@@ -117,10 +117,6 @@ hc pad $monitor $panel_height
         echo -n "$separator"
         echo -n "^bg()^fg() ${windowtitle//^/^^}"
         additional=""
-        if [ `hostname` = "adalon" ]; then
-            battery="`apm -l`% `apm -m` min."
-            additional="$separator $battery"
-        fi
         # small adjustments
         right="^bg() $additional $separator^bg() $date $separator"
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
@@ -148,9 +144,6 @@ hc pad $monitor $panel_height
             date)
                 #echo "resetting date" >&2
                 date="${cmd[@]:1}"
-                ;;
-            battery)
-                battery="${cmd[@]:1}"
                 ;;
             quit_panel)
                 exit
