@@ -30,6 +30,7 @@ hc keybind $Mod-l spawn xscreensaver-command -lock
 
 hc keybind $Mod-Return spawn st
 hc keybind $Mod-x spawn firefox
+hc keybind $Mod-e spawn emacs
 
 # basic movement
 # focusing clients
