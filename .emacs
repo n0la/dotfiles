@@ -20,6 +20,7 @@
 (require 'whitespace)
 
 (require 'package)
+(package-initialize)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
@@ -44,10 +45,8 @@
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
-;; This from a japanese individual.  I hope it works.
 (setq default-buffer-file-coding-system 'utf-8)
 
-;;(setq tab-stop-list (number-sequence 4 200 4))
 (setq line-number-mode t)
 (setq column-number-mode t)
 
@@ -67,12 +66,20 @@
  '(standard-indent 4)
  '(tab-width 8))
 
+(require 'magit)
+
+(require 'dash)
+(require 's)
+
+(-each
+   (-map
+      (lambda (item)
+      (format "~/.emacs.d/elpa/%s" item))
+   (-filter
+      (lambda (item) (s-contains? "theme" item))
+      (directory-files "~/.emacs.d/elpa/")))
+   (lambda (item)
+      (add-to-list 'custom-theme-load-path item)))
+
 (load-theme 'sanityinc-solarized-dark)
 (set-default-font 'terminus)
-
-;;(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
-;; '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "*" :family "terminus")))))
