@@ -55,3 +55,4 @@ if [ $RET == 0 ]; then
 fi
 
 alias xterm='xterm -u8'
+export HISTCONTROL=ignoredups
