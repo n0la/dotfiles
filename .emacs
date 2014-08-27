@@ -5,9 +5,10 @@
 
 (global-set-key (kbd "C-x g") 'magit-status)
 
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-;;(scroll-bar-mode -1)
+(when (display-graphic-p)
+  (menu-bar-mode -1)
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1))
 
 (add-to-list 'load-path "~/.dotfiles/.emacs.d/")
 
@@ -83,5 +84,13 @@
    (lambda (item)
       (add-to-list 'custom-theme-load-path item)))
 
-(load-theme 'sanityinc-solarized-dark)
+(when (display-graphic-p)
+  (load-theme 'sanityinc-solarized-dark t))
+
 (set-default-font 'terminus)
+
+(setq c-default-style "k&r"
+      c-basic-offset 4)
+
+;; default to unified diffs
+(setq diff-switches "-u")
