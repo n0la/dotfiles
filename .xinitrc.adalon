@@ -19,6 +19,6 @@ fi
 
 eval `ssh-agent`
 
-exec startxfce4
+#exec startxfce4
 
-#ssh-agent herbstluftwm
+exec herbstluftwm
