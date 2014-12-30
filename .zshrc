@@ -9,3 +9,6 @@ compinit
 promptinit
 
 prompt walters
+
+export EDITOR="emacs"
+export BROWSER="firefox"
