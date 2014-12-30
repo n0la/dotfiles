@@ -31,11 +31,6 @@ unignore Cc
 unignore To
 unignore User-Agent
 
-# Various other settings that make mutt work 
-# better with GMail
-set timeout=15
-set mail_check=60
-
 set sort = 'threads'
 set sort_aux = 'last-date-received'
 
@@ -48,4 +43,4 @@ set move = no
 auto_view text/html;
 
 source ~/.dotfiles/.mutt/mutt-colors-arch.muttrc
-
+#source ~/.dotfiles/.mutt/mutt-colors-solarized-dark-16.muttrc
