@@ -85,7 +85,7 @@
       (add-to-list 'custom-theme-load-path item)))
 
 (when (display-graphic-p)
-  (load-theme 'sanityinc-solarized-dark t))
+  (load-theme 'solarized-dark t))
 
 (set-default-font 'terminus)
 
