@@ -71,19 +71,6 @@
 
 (require 'magit)
 
-(require 'dash)
-(require 's)
-
-(-each
-   (-map
-      (lambda (item)
-      (format "~/.emacs.d/elpa/%s" item))
-   (-filter
-      (lambda (item) (s-contains? "theme" item))
-      (directory-files "~/.emacs.d/elpa/")))
-   (lambda (item)
-      (add-to-list 'custom-theme-load-path item)))
-
 (when (display-graphic-p)
   (load-theme 'solarized-dark t))
 
