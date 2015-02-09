@@ -12,3 +12,5 @@ prompt walters
 
 export EDITOR="emacs"
 export BROWSER="firefox"
+
+ulimit -d unlimited
