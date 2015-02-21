@@ -13,4 +13,5 @@ prompt walters
 export EDITOR="emacs"
 export BROWSER="firefox"
 
+stty erase ^H
 ulimit -d unlimited
