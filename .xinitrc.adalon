@@ -9,7 +9,7 @@ dbus-daemon --session --fork
 source ~/.bashrc
 
 export LD_PRELOAD=libpthread.so
-export LANG="en_US.UTF-8"
+export LANG="en_GB.UTF-8"
 export QT_X11_NO_MITSHM=1
 export LC_CTYPE=$LANG
 export LC=$LANG
