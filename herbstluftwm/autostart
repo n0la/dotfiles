@@ -28,7 +28,15 @@ hc keybind $Mod-Shift-d detect_monitors
 
 hc keybind $Mod-l spawn xscreensaver-command -lock
 
-hc keybind $Mod-Return spawn st
+PATH=$PATH:/usr/local/bin
+
+if whereis xfce4-terminal >/dev/null; then
+    hc keybind $Mod-Return spawn xfce4-terminal
+elif whereis st >/dev/null; then
+    hc keybind $Mod-Return spawn st
+else
+    hc keybind $Mod-Return spawn xterm
+fi
 hc keybind $Mod-x spawn firefox
 hc keybind $Mod-e spawn emacs
 
