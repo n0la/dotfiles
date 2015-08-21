@@ -31,14 +31,6 @@ servers = (
     ssl_verify = "no";
   },
   {
-    address = "n0la.org";
-    port = "5222";
-    #use_ssl = "yes";
-    chatnet = "n0la";
-    #password = "<password>";
-    autoconnect = "no";
-  },
-  {
     address = "irc.freenode.net";
     chatnet = "FreeNode";
     port = "6697";
