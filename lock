@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Pause cmus if it is running.
+#if pidof cmus >/dev/null; then
+#    cmus-remote -s
+#fi
+
+xscreensaver-command -lock

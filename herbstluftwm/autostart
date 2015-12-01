@@ -8,10 +8,6 @@ hc() {
 
 hc emit_hook reload
 
-hc detect_monitors
-
-feh --bg-fill ~/.dotfiles/wallpaper.jpg
-
 # remove all existing keybindings
 hc keyunbind --all
 
@@ -19,26 +15,15 @@ hc keyunbind --all
 # if you have a super key you will be much happier with Mod set to Mod4
 #Mod=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
-#Mod=F35
 
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
-hc keybind $Mod-Shift-d detect_monitors
 
-hc keybind $Mod-l spawn xscreensaver-command -lock
-
-PATH=$PATH:/usr/local/bin
-
-if whereis xfce4-terminal >/dev/null; then
-    hc keybind $Mod-Return spawn xfce4-terminal
-elif whereis st >/dev/null; then
-    hc keybind $Mod-Return spawn st
-else
-    hc keybind $Mod-Return spawn xterm
-fi
+hc keybind $Mod-Return spawn urxvt
+hc keybind $Mod-a spawn ~/.dotfiles/dmenu_run_hlwm
+hc keybind $Mod-l spawn ~/.dotfiles/lock
 hc keybind $Mod-x spawn firefox
-hc keybind $Mod-e spawn emacs
 
 # basic movement
 # focusing clients
@@ -68,8 +53,8 @@ hc keybind $Mod-Control-p       resize up +$resizestep
 hc keybind $Mod-Control-f       resize right +$resizestep
 
 # tags
-tag_names=( "main" "web" "tag3" "tag4"
-    "tag5" "tag6" "tag7" "tag8" "tag9" )
+tag_names=( "main" "web" "im" "misc4" "misc5"
+    "misc6" "misc7" "misc8" "misc9" )
 tag_keys=( {1..9} 0 )
 
 hc rename default "${tag_names[0]}" || true
@@ -90,8 +75,12 @@ hc keybind $Mod-comma  use_index -1 --skip-visible
 hc keybind $Mod-r remove
 hc keybind $Mod-space cycle_layout 1
 hc keybind $Mod-s floating toggle
-hc keybind $Mod-f fullscreen toggle
-hc keybind $Mod-p pseudotile toggle
+hc keybind $Mod-m fullcreen toggle
+hc keybind $Mod-t pseudotile toggle
+
+hc keybind $Mod-Shift-s spawn setxkbmap se
+hc keybind $Mod-Shift-g spawn setxkbmap gb
+hc keybind $Mod-Shift-d spawn setxkbmap de
 
 # mouse
 hc mouseunbind --all
@@ -106,35 +95,42 @@ hc keybind $Mod-Shift-Tab   cycle_all -1
 hc keybind $Mod-c cycle
 hc keybind $Mod-i jumpto urgent
 
-hc set frame_padding 1
-hc set frame_gap 0
 
-# colors
-hc set frame_border_active_color '#222222'
-hc set frame_border_normal_color '#101010'
-hc set frame_bg_normal_color '#565656'
-hc set frame_bg_active_color '#345F0C'
-hc set frame_border_width 1
-hc set window_border_width 3
-hc set window_border_inner_width 1
-hc set window_border_normal_color '#454545'
-hc set window_border_active_color '#9fbc00'
-hc set always_show_frame 1
+# Colours.
+hc set frame_border_active_color '#1793D0'
+hc set frame_border_normal_color '#123456'
 hc set frame_bg_transparent 1
-hc set frame_transparent_width 5
+hc set frame_border_width 1
+hc set window_border_normal_color '#123456'
+hc set window_border_active_color '#1793D0'
+hc set frame_bg_normal_color '#123456'
+hc set frame_bg_active_color '#1793D0'
+hc set window_border_width 2
+hc set window_border_inner_width 1
+hc set always_show_frame 1
+hc set frame_transparent_width 2
+hc set frame_gap 0
 # add overlapping window borders
 hc set window_gap -2
+hc set frame_padding 2
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
 
 # rules
 hc unrule -F
+
+imtag=im # just set the name of the tag here
+hc load "$imtag" '(split horizontal:0.800000:0 (clients grid:0) (clients vertical:0))'
+hc rule class=Pidgin   windowrole=buddy_list tag=$imtag index=1 focus=off
+hc rule class=Pidgin ! windowrole=buddy_list tag=$imtag index=0
+
 #hc rule class=XTerm tag=3 # move all xterms to tag 3
 hc rule focus=off # normally do not focus new clients
 # give focus to most common terminals
-hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole.*|.*st.*)' focus=on
-hc rule title~'(.*Firefox.*)' tag=web
+hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
+hc rule class~'(.*Firefox)' tag=web
+hc rule class~'(.*Iceweasel)' tag=web
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 hc() { "${herbstclient_command[@]:-herbstclient}" "$@" ;}
 monitor=${1:-0}
@@ -12,7 +12,7 @@ x=${geometry[0]}
 y=${geometry[1]}
 panel_width=${geometry[2]}
 panel_height=16
-font="-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*"
+font="-*-terminus-*-*-*-*-12-*-*-*-*-*-*-*"
 bgcolor=$(hc get frame_border_normal_color)
 selbg=$(hc get window_border_active_color)
 selfg='#101010'
@@ -63,11 +63,24 @@ hc pad $monitor $panel_height
 
     #mpc idleloop player &
     while true ; do
+        battery="Battery: "`acpi | egrep -o "[[:digit:]]+%"`
+        echo -e "battery\t^fg(#efefef)$battery^fg(#909090)"
+
+        layout=`setxkbmap -query | grep "layout:" | cut -d' ' -f6 | tr 'a-z' 'A-Z'`
+        echo -e "layout\t^fg(#efefef)$layout^fg(#909090)"
+
+        mail=`mailcheck -s`
+        echo -e "mail\t$mail"
+
+        cmusstatus=`~/bin/cmus-status`
+        echo -e "cmusstatus\t$cmusstatus"
+
         # "date" output is checked once a second, but an event is only
         # generated if the output changed compared to the previous run.
-        date +$'date\t^fg(#efefef)%H:%M^fg(#909090), ^fg(#efefef)%d^fg(#909090)-%m-%Y'
+        date +$'date\t^fg(#efefef)%H:%M^fg(#909090) ^fg(#efefef)%d^fg(#909090)-%m-%Y'
         sleep 1 || break
     done > >(uniq_linebuffered) &
+
     childpid=$!
     hc --idle
     kill $childpid
@@ -75,6 +88,7 @@ hc pad $monitor $panel_height
     IFS=$'\t' read -ra tags <<< "$(hc tag_status $monitor)"
     visible=true
     date=""
+    layout=""
     windowtitle=""
     while true ; do
 
@@ -116,9 +130,15 @@ hc pad $monitor $panel_height
         done
         echo -n "$separator"
         echo -n "^bg()^fg() ${windowtitle//^/^^}"
-        additional=""
+
+        newmail=""
+
+        if echo "$mail" | grep -q "new"; then
+            newmail="$additional $separator ^fg(#efefef)mail^fg(#909090)"
+        fi
+
         # small adjustments
-        right="^bg() $additional $separator^bg() $date $separator"
+        right="$separator $layout $separator $cmusstatus $separator $battery$newmail $separator^bg() $date $separator"
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
         # get width of right aligned text.. and add some space..
         width=$($textwidth "$font" "$right_text_only    ")
@@ -141,9 +161,21 @@ hc pad $monitor $panel_height
                 #echo "resetting tags" >&2
                 IFS=$'\t' read -ra tags <<< "$(hc tag_status $monitor)"
                 ;;
+            layout)
+                layout="${cmd[@]:1}"
+                ;;
             date)
                 #echo "resetting date" >&2
                 date="${cmd[@]:1}"
+                ;;
+            battery)
+                battery="${cmd[@]:1}"
+                ;;
+            mail)
+                mail="${cmd[@]:1}"
+                ;;
+            cmusstatus)
+                cmusstatus="${cmd[@]:1}"
                 ;;
             quit_panel)
                 exit
