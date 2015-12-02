@@ -72,7 +72,7 @@ hc pad $monitor $panel_height
         mail=`mailcheck -s`
         echo -e "mail\t$mail"
 
-        cmusstatus=`~/bin/cmus-status`
+        cmusstatus=`~/.dotfiles/cmus-status`
         echo -e "cmusstatus\t$cmusstatus"
 
         # "date" output is checked once a second, but an event is only
