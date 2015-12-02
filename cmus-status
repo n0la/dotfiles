@@ -1,0 +1,72 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+my $status = '??';
+my $artist = "";
+my $title = "";
+my $album = "";
+my $vol = 0;
+my $ec = 1;
+my $sep;
+
+if (open(CMUS, "cmus-remote -Q 2>/dev/null |")) {
+    while (<CMUS>) {
+        my $line = $_;
+        chomp($line);
+
+        if ($line =~ m/status\s(\w+)/) {
+            $status = '>>' if $1 =~ m/playing/i;
+            $status = '||' if $1 =~ m/paused/i;
+            $status = '>|' if $1 =~ m/stopped/i;
+        }
+
+        if ($line =~ m/tag artist (.*)/i) {
+            $artist = $1;
+        }
+
+        if ($line =~ m/tag title (.*)/i) {
+            $title = $1;
+        }
+
+        if ($line =~ m/tag album (.*)/i) {
+            $album = $1;
+        }
+
+        if ($line =~ m/set vol_left (\d+)/i) {
+            $vol = $1;
+        }
+    }
+
+    close(CMUS);
+    $ec = $?;
+}
+
+print("^fg(#909090)CMUS: ");
+if ($ec > 0) {
+    print("Not running");
+} else {
+    print("^fg(#efefef)$status^fg(#909090)");
+
+    if ($artist ne "") {
+        print(" $artist");
+        $sep = 1;
+    }
+
+    if ("$title" ne "") {
+        if ($sep) {
+            print(" - ");
+        }
+        print("^fg(#efefef)$title^fg(#909090)");
+        $sep = 1;
+    }
+
+    if ("$album" ne "") {
+        if ($sep) {
+            print(" - ");
+        }
+        print("$album");
+    }
+    print(" | ^fg(#efefef)VOL: $vol%^fg(#909090)");
+}
