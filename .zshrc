@@ -10,8 +10,10 @@ promptinit
 
 prompt walters
 
-export EDITOR="emacs"
+export EDITOR="emacs -nw"
 export BROWSER="firefox"
+export MAILDIR="~/.mail/"
+export MAIL="~/.mail/"
 
 #stty erase ^H
 ulimit -d unlimited
