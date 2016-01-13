@@ -11,6 +11,10 @@ export QT_X11_NO_MITSHM=1
 export LC_CTYPE=$LANG
 export LC=$LANG
 
+if [ -x $HOME/.dotfiles/.fehbg ]; then
+    $HOME/.dotfiles/.fehbg
+fi
+
 if whereis redshift; do
     redshift &
 done
