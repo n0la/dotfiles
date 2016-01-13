@@ -11,4 +11,8 @@ export QT_X11_NO_MITSHM=1
 export LC_CTYPE=$LANG
 export LC=$LANG
 
+if whereis redshift; do
+    redshift &
+done
+
 exec herbstluftwm
