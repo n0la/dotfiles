@@ -1,31 +1,29 @@
-;; Change default for backspace and help.
-;; Emacs does not adhere to the *NIX tradition that C-h is backspace.
 (global-set-key [(control h)] 'delete-backward-char)
 (global-set-key (kbd "C-?") 'help-command)
-
-(global-set-key (kbd "C-x g") 'magit-status)
 
 (when (display-graphic-p)
   (menu-bar-mode -1)
   (tool-bar-mode -1)
   (scroll-bar-mode -1))
 
+(global-set-key (kbd "C-x g") 'magit-status)
+
 (add-to-list 'load-path "~/.dotfiles/.emacs.d/")
+
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")
+                         ("org" . "http://orgmode.org/elpa/")))
+(require 'package)
+(package-initialize)
 
 (require 'doc-mode)
 ;; ASCII doc editing.
 (add-to-list 'auto-mode-alist '("\\\.\\(doc\\|asciidoc\\)$" . doc-mode))
-
-(require 'yaml-mode)
 ;; YAML editing.
 (add-to-list 'auto-mode-alist '("\\.\\(yml\\|yaml\\)$" . yaml-mode))
 
 (require 'whitespace)
-
-(require 'package)
-(package-initialize)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 ;; Default fill column of 78.
 (set-fill-column 78)
@@ -73,8 +71,6 @@
  '(standard-indent 4)
  '(tab-width 8)
  '(tool-bar-mode nil))
-
-(require 'magit)
 
 (when (display-graphic-p)
   (load-theme 'solarized-dark t))
