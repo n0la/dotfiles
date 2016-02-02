@@ -72,10 +72,10 @@
  '(tab-width 8)
  '(tool-bar-mode nil))
 
-(when (display-graphic-p)
-  (load-theme 'solarized-dark t))
-
 (set-default-font 'terminus)
+
+(when (display-graphic-p)
+  (load-theme 'tsdh-dark t))
 
 (setq c-default-style "k&r"
       c-basic-offset 4)
@@ -87,4 +87,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Terminus" :foundry "xos4" :slant normal :weight normal :height 120 :width normal)))))
+ '(default ((t (:family "Terminus" :foundry "xos4" :slant normal :weight normal :height 120 :width normal))))
+ '(mode-line ((t (:background "gray30" :box (:line-width 1 :color "firebrick") :family "Terminus")))))
