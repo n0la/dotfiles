@@ -1,2 +1,2 @@
 #!/bin/sh
-feh  --image-bg black --bg-center '/home/florian/.dotfiles/wallpaper.jpg' 
+feh  --bg-fill '/home/florian/.dotfiles/wallpaper.png' 
