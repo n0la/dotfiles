@@ -15,8 +15,10 @@ if [ -x $HOME/.dotfiles/.fehbg ]; then
     $HOME/.dotfiles/.fehbg
 fi
 
-if whereis redshift; do
+if whereis redshift; then
     redshift &
-done
+fi
+
+eval `ssh-agent -s`
 
 exec herbstluftwm
