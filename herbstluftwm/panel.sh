@@ -63,14 +63,11 @@ hc pad $monitor $panel_height
 
     #mpc idleloop player &
     while true ; do
-        battery="Battery: "`acpi | egrep -o "[[:digit:]]+%"`
+        battery="Battery: "$(apm -l)"%"
         echo -e "battery\t^fg(#efefef)$battery^fg(#909090)"
 
         layout=`setxkbmap -query | grep "layout:" | cut -d' ' -f6 | tr 'a-z' 'A-Z'`
         echo -e "layout\t^fg(#efefef)$layout^fg(#909090)"
-
-        mail=`mailcheck -s`
-        echo -e "mail\t$mail"
 
         cmusstatus=`~/.dotfiles/cmus-status`
         echo -e "cmusstatus\t$cmusstatus"
