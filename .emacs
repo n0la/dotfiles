@@ -66,6 +66,7 @@
  '(inhibit-startup-screen t)
  '(ispell-dictionary "en_GB-ise")
  '(ispell-highlight-face (quote flyspell-incorrect))
+ '(magit-push-always-verify nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(standard-indent 4)
