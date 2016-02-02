@@ -6,9 +6,8 @@ zstyle :compinstall filename '/home/flo/.zshrc'
 
 autoload -Uz compinit promptinit
 compinit
-promptinit
 
-prompt walters
+export PS1="%n@%m$ "
 
 export EDITOR="emacs -nw"
 export BROWSER="firefox"
