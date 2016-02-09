@@ -11,3 +11,6 @@ export MAILDIR="~/.mail/"
 export MAIL="~/.mail/"
 
 ulimit -d unlimited
+
+# Perl local lib support.
+. $HOME/.dotfiles/.locallib
