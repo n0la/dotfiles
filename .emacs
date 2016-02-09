@@ -1,6 +1,9 @@
 (global-set-key [(control h)] 'delete-backward-char)
 (global-set-key (kbd "C-?") 'help-command)
 
+;; Use Emacs terminfo, not system terminfo
+(setq system-uses-terminfo nil)
+
 (when (display-graphic-p)
   (menu-bar-mode -1)
   (tool-bar-mode -1)
