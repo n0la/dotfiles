@@ -14,3 +14,8 @@ ulimit -d unlimited
 
 # Perl local lib support.
 . $HOME/.dotfiles/.locallib
+
+if [ -e $HOME/.cabal/bin ]; then
+    PATH=$PATH:$HOME/.cabal/bin
+    export PATH
+fi
