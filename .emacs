@@ -69,7 +69,7 @@
     ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
- '(ispell-dictionary "en_GB-ise")
+ '(ispell-dictionary "british")
  '(ispell-highlight-face (quote flyspell-incorrect))
  '(magit-push-always-verify nil)
  '(make-backup-files nil)
