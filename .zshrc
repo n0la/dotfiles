@@ -12,6 +12,8 @@ export MAIL="~/.mail/"
 
 ulimit -d unlimited
 
+alias cvsup='cvs up -Pd . 2>/dev/null'
+
 # Perl local lib support.
 . $HOME/.dotfiles/.locallib
 
