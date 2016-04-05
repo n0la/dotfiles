@@ -287,3 +287,7 @@ settings = {
   core = { real_name = "nola"; user_name = "nola"; nick = "nola"; };
   "fe-text" = { actlist_sort = "refnum"; };
 };
+ignores = (
+  { level = "CTCPS"; },
+  { mask = "DryEagle"; level = "ALL"; }
+);
