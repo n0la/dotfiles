@@ -1,3 +1,0 @@
-!#/bin/sh
-
-watch -n 15 --no-title acpi -b
