@@ -1,9 +1,0 @@
-
-# Firefox!
-bind f exec firefox
-# So the machine locks
-bind l exec /home/flo/bin/lock
-
-bind c exec st
-bind C-c exec st
-
