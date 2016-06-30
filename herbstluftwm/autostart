@@ -21,8 +21,8 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 
 hc keybind $Mod-Return spawn urxvt
-hc keybind $Mod-a spawn ~/.dotfiles/dmenu_run_hlwm
-hc keybind $Mod-l spawn ~/.dotfiles/lock
+hc keybind $Mod-a spawn dmenu_run_hlwm
+hc keybind $Mod-l spawn slock
 hc keybind $Mod-x spawn firefox
 
 # basic movement
