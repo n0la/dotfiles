@@ -74,7 +74,7 @@
  '(magit-push-always-verify nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
- '(safe-local-variable-values (quote ((flyspell-mode t))))
+ '(safe-local-variable-values (quote ((flyspell-mode) (flyspell-mode t))))
  '(standard-indent 4)
  '(tab-width 8)
  '(tool-bar-mode nil))
