@@ -4,7 +4,8 @@ xset -b
 xrdb -merge ~/.Xresources
 setxkbmap gb
 xscreensaver -no-splash &
-dbus-daemon --session --fork
+
+eval `dbus-launch --sh-syntax --exit-with-session`
 
 export LANG="en_US.UTF-8"
 export QT_X11_NO_MITSHM=1
