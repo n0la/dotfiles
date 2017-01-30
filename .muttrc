@@ -1,4 +1,4 @@
-set smtp_url = "smtps://florian@n0la.org"
+set smtp_url = "smtp://florian@n0la.org:587"
 set spoolfile = "imaps://florian@n0la.org/
 set folder = "imaps://florian@n0la.org/"
 
