@@ -4,8 +4,6 @@ xset fp rehash
 xset -b
 xrdb -merge ~/.Xresources
 setxkbmap gb
-xscreensaver -no-splash &
-source ~/.bashrc
 
 export LD_PRELOAD=libpthread.so
 export LANG="en_GB.UTF-8"
@@ -13,12 +11,13 @@ export QT_X11_NO_MITSHM=1
 export LC_CTYPE=$LANG
 export LC=$LANG
 
+if [ -x "$HOME/.fehbg" ]; then
+    $HOME/.fehbg
+fi
+
 if [ -z "${DBUS_SESSION_BUS_ADDRESS}" ]; then
   eval `dbus-launch --auto-syntax --exit-with-session`
 fi
 
 eval `ssh-agent`
-
-#exec startxfce4
-
 exec herbstluftwm
