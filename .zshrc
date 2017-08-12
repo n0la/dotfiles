@@ -1,4 +1,4 @@
-bindkey -e
+bindkey -e emacs
 
 autoload -Uz compinit promptinit
 compinit
