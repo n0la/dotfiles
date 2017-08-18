@@ -10,6 +10,8 @@ export BROWSER="firefox"
 export MAILDIR="~/.mail/"
 export MAIL="~/.mail/"
 
+export LANG="en_GB.UTF-8"
+
 ulimit -d unlimited
 
 alias cvsup='cvs up -Pd . 2>/dev/null'
