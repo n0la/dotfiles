@@ -14,6 +14,9 @@ export LANG="en_GB.UTF-8"
 
 ulimit -d unlimited
 
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+
 alias cvsup='cvs up -Pd . 2>/dev/null'
 
 if [ -e $HOME/.cabal/bin ]; then
