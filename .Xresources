@@ -7,6 +7,16 @@ urxvt*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT
 urxvt*allowSendEvents: true
 urxvt*scrollBar: false
 
+xterm*faceName: xft:Terminus
+xterm*faceSize: 12
+xterm*metaSendsEscape: true
+xterm*locale: UTF-8
+xterm*encoding: UTF-8
+xterm*utf8: true
+xterm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+xterm*allowSendEvents: true
+xterm*scrollBar: false
+
 ! Solarized color scheme for the X Window System
 !
 ! http://ethanschoonover.com/solarized
@@ -26,6 +36,13 @@ urxvt*fadeColor:             S_base03
 urxvt*cursorColor:           S_base1
 urxvt*pointerColorBackground:S_base01
 urxvt*pointerColorForeground:S_base1
+
+xterm*background:            S_base03
+xterm*foreground:            S_base0
+xterm*fadeColor:             S_base03
+xterm*cursorColor:           S_base1
+xterm*pointerColorBackground:S_base01
+xterm*pointerColorForeground:S_base1
 
 #define S_yellow        #b58900
 #define S_orange        #cb4b16
@@ -67,5 +84,38 @@ urxvt*color14:               S_base1
 !! white dark/light
 urxvt*color7:                S_base2
 urxvt*color15:               S_base3
-urxvt*decTerminalID: vt340
-urxvt*numColorRegisters: 256
+
+!! black dark/light
+xterm*color0:                S_base02
+xterm*color8:                S_base03
+
+!! red dark/light
+xterm*color1:                S_red
+xterm*color9:                S_orange
+
+!! green dark/light
+xterm*color2:                S_green
+xterm*color10:               S_base01
+
+!! yellow dark/light
+xterm*color3:                S_yellow
+xterm*color11:               S_base00
+
+!! blue dark/light
+xterm*color4:                S_blue
+xterm*color12:               S_base0
+
+!! magenta dark/light
+xterm*color5:                S_magenta
+xterm*color13:               S_violet
+
+!! cyan dark/light
+xterm*color6:                S_cyan
+xterm*color14:               S_base1
+
+!! white dark/light
+xterm*color7:                S_base2
+xterm*color15:               S_base3
+
+XTerm*decTerminalID: vt340
+XTerm*numColorRegisters: 256
