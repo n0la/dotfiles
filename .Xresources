@@ -9,6 +9,7 @@ urxvt*scrollBar: false
 
 xterm*faceName: xft:Terminus
 xterm*faceSize: 12
+xterm*allowBoldFonts: false
 xterm*metaSendsEscape: true
 xterm*locale: UTF-8
 xterm*encoding: UTF-8
