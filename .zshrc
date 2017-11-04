@@ -14,6 +14,8 @@ export LANG="en_GB.UTF-8"
 
 ulimit -d unlimited
 
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_REDUCE_BLANKS
 
