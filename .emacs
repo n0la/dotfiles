@@ -20,7 +20,6 @@
 (require 'package)
 (package-initialize)
 
-(require 'doc-mode)
 ;; ASCII doc editing.
 (add-to-list 'auto-mode-alist '("\\\.\\(doc\\|asciidoc\\)$" . doc-mode))
 ;; YAML editing.
@@ -66,7 +65,7 @@
  '(column-number-mode t)
  '(custom-safe-themes
    (quote
-    ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(ispell-dictionary "british")
@@ -74,7 +73,9 @@
  '(magit-push-always-verify nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
- '(package-selected-packages (quote (lua-mode cmake-mode markdown-mode yaml-mode magit)))
+ '(package-selected-packages
+   (quote
+    (lex bison-mode edbi-sqlite ## solarized-theme lua-mode cmake-mode markdown-mode yaml-mode magit)))
  '(safe-local-variable-values (quote ((flyspell-mode) (flyspell-mode t))))
  '(standard-indent 4)
  '(tab-width 8)
