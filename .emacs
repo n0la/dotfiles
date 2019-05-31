@@ -61,7 +61,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(c-basic-offset 4)
+ '(c-basic-offset 4 t)
  '(column-number-mode t)
  '(custom-safe-themes
    (quote
@@ -75,8 +75,13 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (lex bison-mode edbi-sqlite ## solarized-theme lua-mode cmake-mode markdown-mode yaml-mode magit)))
- '(safe-local-variable-values (quote ((flyspell-mode) (flyspell-mode t))))
+    (magit-org-todos lex bison-mode edbi-sqlite ## solarized-theme lua-mode cmake-mode markdown-mode yaml-mode magit)))
+ '(safe-local-variable-values
+   (quote
+    ((buffer-file-coding-system . utf-8-unix)
+     (ispell-dictionary . "en_GB")
+     (flyspell-mode)
+     (flyspell-mode t))))
  '(standard-indent 4)
  '(tab-width 8)
  '(tool-bar-mode nil))
