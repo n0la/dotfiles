@@ -73,9 +73,10 @@
  '(magit-push-always-verify nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
+ '(org-agenda-files (quote ("~/docs/rp/pf/iana.txt")))
  '(package-selected-packages
    (quote
-    (magit-org-todos lex bison-mode edbi-sqlite ## solarized-theme lua-mode cmake-mode markdown-mode yaml-mode magit)))
+    (perl6-mode magit-org-todos lex bison-mode edbi-sqlite ## solarized-theme lua-mode cmake-mode markdown-mode yaml-mode magit)))
  '(safe-local-variable-values
    (quote
     ((buffer-file-coding-system . utf-8-unix)
