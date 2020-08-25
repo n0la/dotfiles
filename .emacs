@@ -84,6 +84,7 @@
      (flyspell-mode)
      (flyspell-mode t))))
  '(standard-indent 4)
+ '(tab-always-indent t)
  '(tab-width 8)
  '(tool-bar-mode nil))
 
