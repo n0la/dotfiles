@@ -75,7 +75,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (magit-org-todos lex bison-mode edbi-sqlite ## solarized-theme lua-mode cmake-mode markdown-mode yaml-mode magit)))
+    (meson-mode yaml-mode perl6-mode apt-utils debian-changelog-mode dpkg-dev-el zotelo flycheck-perl6 flycheck-pkg-config flycheck-yamllint org-d20 org-magit magit-org-todos lex bison-mode edbi-sqlite ## solarized-theme lua-mode cmake-mode)))
  '(safe-local-variable-values
    (quote
     ((buffer-file-coding-system . utf-8-unix)
@@ -86,8 +86,6 @@
  '(tab-always-indent t)
  '(tab-width 8)
  '(tool-bar-mode nil))
-
-(set-default-font 'terminus)
 
 (when (display-graphic-p)
   (load-theme 'tsdh-dark t))
