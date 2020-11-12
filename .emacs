@@ -61,7 +61,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(c-basic-offset 4 t)
+ '(c-basic-offset 4)
+ '(c-default-style "k&r")
  '(column-number-mode t)
  '(custom-safe-themes
    '("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))
@@ -87,7 +88,7 @@
 (when (display-graphic-p)
   (load-theme 'tsdh-dark t))
 
-(setq c-default-style '((other. "k&r"))
+(setq c-default-style "k&r"
       c-basic-offset 4)
 
 ;; default to unified diffs
@@ -97,6 +98,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Terminus" :foundry "xos4" :slant normal :weight normal :height 120 :width normal))))
+ '(default ((t (:family "Noto Mono" :foundry "xos4" :slant normal :weight normal :height 180 :width normal))))
  '(mode-line ((t (:background "gray30" :box (:line-width 1 :color "firebrick") :family "Terminus")))))
 (put 'downcase-region 'disabled nil)
