@@ -3,3 +3,5 @@
 	email = fstinglmayr@gmail.com
 [push]
 	default = matching
+[pull]
+	rebase = false

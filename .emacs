@@ -62,15 +62,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(c-basic-offset 4 t)
+ '(c-basic-offset 4)
+ '(c-default-style "k&r")
  '(column-number-mode t)
  '(custom-safe-themes
-   (quote
-    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
+   '("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(ispell-dictionary "british")
- '(ispell-highlight-face (quote flyspell-incorrect))
+ '(ispell-highlight-face 'flyspell-incorrect)
  '(magit-push-always-verify nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
@@ -79,11 +79,10 @@
    (quote
     (perl6-mode magit-org-todos lex bison-mode edbi-sqlite ## solarized-theme lua-mode cmake-mode markdown-mode yaml-mode magit)))
  '(safe-local-variable-values
-   (quote
-    ((buffer-file-coding-system . utf-8-unix)
+   '((buffer-file-coding-system . utf-8-unix)
      (ispell-dictionary . "en_GB")
      (flyspell-mode)
-     (flyspell-mode t))))
+     (flyspell-mode t)))
  '(standard-indent 4)
  '(tab-always-indent t)
  '(tab-width 8)
@@ -102,6 +101,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Terminus" :foundry "xos4" :slant normal :weight normal :height 120 :width normal))))
+ '(default ((t (:family "Noto Mono" :foundry "xos4" :slant normal :weight normal :height 180 :width normal))))
  '(mode-line ((t (:background "gray30" :box (:line-width 1 :color "firebrick") :family "Terminus")))))
 (put 'downcase-region 'disabled nil)
