@@ -39,8 +39,8 @@
   (whitespace-cleanup)
   (set-fill-column 72)
   (setq whitespace-line-column 72))
-(or (assoc "mutt-" auto-mode-alist)
-    (setq auto-mode-alist (cons '("/tmp/mutt*" . mail-mode) auto-mode-alist)))
+(or (assoc "neomutt-" auto-mode-alist)
+    (setq auto-mode-alist (cons '("/tmp/neomutt*" . mail-mode) auto-mode-alist)))
 (add-hook 'mail-mode-hook 'mutt-mail-mode-hook)
 
 (setq whitespace-style '(face empty tabs lines-tail trailing))
