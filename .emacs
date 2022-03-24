@@ -7,7 +7,8 @@
 (when (display-graphic-p)
   (menu-bar-mode -1)
   (tool-bar-mode -1)
-  (scroll-bar-mode -1))
+  (scroll-bar-mode -1)
+  (set-default-font 'terminus))
 
 (global-set-key (kbd "C-x g") 'magit-status)
 
