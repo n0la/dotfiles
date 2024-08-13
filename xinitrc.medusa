@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# reconfigure second monitor to better scaling since its 4k
+xrandr --output DP-0 --mode 3840x2160 --scale 1.0x1.0
+xrandr --output DP-2 --mode 2560x1440 --scale 1.5x1.5
+
