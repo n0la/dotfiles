@@ -16,10 +16,11 @@ if (open(CMUS, "cmus-remote -Q 2>/dev/null |")) {
         my $line = $_;
         chomp($line);
 
-        if ($line =~ m/status\s(\w+)/) {
-            $status = '>>' if $1 =~ m/playing/i;
-            $status = '||' if $1 =~ m/paused/i;
-            $status = '>|' if $1 =~ m/stopped/i;
+        if ($line =~ m/status\s(\w+)/i) {
+            my $stat = $1;
+            $status = '>>' if $stat =~ m/playing/i;
+            $status = '||' if $stat =~ m/paused/i;
+            $status = '>|' if $stat =~ m/stopped/i;
         }
 
         if ($line =~ m/tag artist (.*)/i) {
